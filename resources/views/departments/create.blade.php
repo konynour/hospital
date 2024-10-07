@@ -3,14 +3,14 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2"> Create Deparmnet</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-            <a href="/department/create" class="btn btn-primary">List All new Departments</button>
+            <a href="{{ route('departments.index') }}" class="btn btn-primary">List All new Departments</a>
 
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col">
-                <form action="/department/store " method ="POST">
+                <form action="{{ route('departments.store') }}" method ="POST">
                     @csrf
 
                     <div class="mb-3">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->foreignId('mangaer_id')->nullable()->constrained('user')->onDelete('cascade')->onUpdate("cascade");
+            $table->foreignId('mangaer_id')->nullable()->constrained('users')->onDelete('cascade')->onUpdate("cascade");
             $table->timestamps();
         });
     }

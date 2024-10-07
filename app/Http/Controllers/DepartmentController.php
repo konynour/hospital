@@ -31,11 +31,11 @@ class DepartmentController extends Controller
     public function store(Request $request)
     {
                 // echo"hi nour mohamed ";
-                  dd(vars: $request->input());
+                //   dd(vars: $request->input());
                 $department = new Department ();
-                $department->name =$request->Description ;
+                $department->description =$request->Description ;
                 $department->save();
-                return redirect()->to("/department");
+                return to_route('departments.index');
     }
 
     /**
